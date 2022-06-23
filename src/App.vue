@@ -1,21 +1,27 @@
 <script setup>
-	import TheHeader from './components/TheHeader.vue';
+	import TheSidebar from './components/TheSidebar.vue';
 </script>
 
 <template>
-	<TheHeader />
-	<div>
-		<h1>app.vue</h1>
+	<div class="app">
+		<TheSidebar />
+		<router-view />
 	</div>
 </template>
 
 <style>
-	#app {
-		font-family: Avenir, Helvetica, Arial, sans-serif;
-		-webkit-font-smoothing: antialiased;
-		-moz-osx-font-smoothing: grayscale;
-		text-align: center;
-		color: #2c3e50;
-		margin-top: 60px;
+	:root {
+		--el-buffer: 30px;
+	}
+
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		font-family: 'Fira sans', sans-serif;
+	}
+
+	main {
+		margin: var(--el-buffer);
 	}
 </style>
