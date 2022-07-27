@@ -5,6 +5,7 @@ import GrantsPrograms from '../views/grants-programs/GrantsPrograms.vue';
 import GrantsProgramsDetails from '../views/grants-programs/GrantsProgramsDetails.vue';
 import Resources from '../views/Resources.vue';
 import Events from '../views/Events.vue';
+import NotFound from '../views/NotFound.vue';
 
 const routes = [
 	{
@@ -37,6 +38,12 @@ const routes = [
 		path: '/events',
 		name: 'Events',
 		component: Events,
+	},
+	// 404
+	{
+		path: '/:catchAll(.*)',
+		name: 'NotFound',
+		component: NotFound,
 	},
 ];
 

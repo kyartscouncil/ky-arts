@@ -15,14 +15,8 @@
 </template>
 
 <script setup>
-	import { ref } from 'vue';
-
-	const grants = ref([
-		{ title: 'Kentucky Arts Partnership Grant', id: 1, description: 'This is the description for KAP.' },
-		{ title: 'Kentucky Peer Advisory Network', id: 2, description: 'This is the description for KPAN.' },
-		{ title: 'Al Smith Fellowship Grant', id: 3, description: 'This is the description for ASF.' },
-		{ title: 'Emerging Artist Grant', id: 4, description: 'This is the description for EA.' },
-	]);
+	import getCollection from '../../composables/getCollection';
+	const { documents: grants } = getCollection('grants-programs');
 </script>
 
 <style scoped>

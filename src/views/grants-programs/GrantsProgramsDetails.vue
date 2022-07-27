@@ -1,15 +1,18 @@
 <template>
-	<h1>Grants and Programs Details</h1>
-	<p>The ID is {{ id }}</p>
+	<section>
+		<h1>Grants and Programs Details</h1>
+		<p>ID: {{ id }}</p>
+		<p>Title: {{ title }}</p>
+		<p>Description: {{ description }}</p>
+	</section>
 </template>
 <script setup>
 	import { ref } from 'vue';
-	import { useRoute } from 'vue-router';
-
 	const props = defineProps(['id']);
-
-	// const route = useRoute();
-	// const id = ref(route.params.id);
 </script>
 
-<style></style>
+<style>
+	section {
+		margin: 30px;
+	}
+</style>
