@@ -8,6 +8,7 @@
 					<router-link :to="{ name: 'GrantsProgramsDetails', params: { id: grant.id } }">
 						{{ grant.title }}
 					</router-link>
+					<p>{{ grant.description }}</p>
 				</li>
 			</ul>
 		</section>
